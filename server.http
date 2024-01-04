@@ -1,0 +1,39 @@
+###
+post http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "rishanth1",
+    "password": "Rishanth@123"
+}
+
+###
+post http://localhost:3000/register/
+Content-type: application/json
+
+{
+    "username": "adbuth9",
+    "usertype": "client",
+    "name": "Adbuth",
+    "password": "Adbuth@1234"
+}
+
+###
+post http://localhost:3000/fileupload/
+Authorization: bearer {JWT Token}
+Content-Type: application/json
+
+{
+    "username": "rishanth1",
+    "file_id": "22",
+    "file_name":"EZ_Back_end_project",
+    "url": "https://docs.google.com/document/d/1MtTa7PHPdUlJDMsr4bL5U54cgcPuUOZ3/edit?usp=sharing&ouid=109180185484132523526&rtpof=true&sd=true",
+    "file_type":"docx"
+}
+
+###
+get http://localhost:3000/fileslist/
+Authorization: bearer {JWT Token}
+###
+get http://localhost:3000/downloadfile/11/
+Authorization: bearer {JWT Token}
